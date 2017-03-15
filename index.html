@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html>
+<!-- talked about this is class - specifies english language -->
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <title>Portfolio</title>
+    <!-- meta tag for mobile first design -->
     <meta name="viewport" content="width=device-width, initial-scale= 1">
+    <!-- link to font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="modules.css">
   </head>
   <body>
     <header class ="portfolio-header clearfix">
@@ -14,13 +19,13 @@
         <h2>Online Portfolio</h2>
       </section>
       <nav class="main-nav">
-        <!-- hamburger menu font icon added here -->
+        <!-- hamburger menu font icon added here from font awesome -->
         <i class="fa fa-bars" aria-hidden="true"></i>
         <ul>
-          <!-- find icons for home, projects, skills and about tabs, see lab code for examples-->
-          <li class="tab" data-content="home"></li>
+          <!-- find icons to use for nav-->
+          <li class="tab" data-content="home">Home</li>
           <!-- add link to github repo here -->
-          <li class="tab" data-content="projects">Project</a></li>
+          <li class="tab" data-content="projects">Projects</a></li>
           <li class="tab" data-content="skills">Skills</li>
           <li class="tab" data-content="about">About</li>
         </ul>
@@ -35,10 +40,15 @@
               in <address><a href="">Code Language</a></address>
               <!-- I want to show the date I completed the project on github need to ask TA or Sam about how to do that magical math in js for this -->
               Completed <time pubdate datetime="2000-01-01">Completed Time</time>
-
+            </div>
           </header>
+          <section class="project-description"></section>
       </section>
     </main>
-  <link rel="text/javascript" href="app.js">
-  </body>
+    <footer>
+      &copy; 2017 Anna Shelby | Portfolio | Code Fellows 301
+    </footer>
+  <script type="text/javascript" src="projectInfo.js"></script>
+  <script type="text/javascript" src="app.js">
+</body>
 </html>
