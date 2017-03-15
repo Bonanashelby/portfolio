@@ -10,7 +10,7 @@ function Projects (projs) {
   this.completedOn = projs.completedOn;
   this.description = projs.description;
 }
-
+// just started this part - but did not finish the JS part
 Projects.prototype.toHtml = function(){
   var $newProject = $('project.template').clone();
   $newProject.removeClass('template');
