@@ -7,9 +7,10 @@
   padding: 0 0 .1em .1em;
 }
 
-.i {
+i {
   float: right;
-  padding: 0 0 .2em 1em;
+  padding-left: 300px;
+  color: red;
 }
 
 .main-nav {
@@ -46,7 +47,7 @@
 /*MOBILE FIRST @MEDIA============*/
 
 @media only screen and (max-width: 960px) {
-  .i {
+  i {
   display:none;
   }
 
