@@ -11,13 +11,12 @@ function Projects (projs) {
 }
 
 Projects.prototype.toHtml = function(){
-  var source = $('#project.template').html();
-  var templateRender = handlebars.compile(source);
+  var source = $('#project-template').html();
+  var templateRender = Handlebars.compile(source);
 
   this.daysAgo = parseInt((new Date () - new Date(this.completedOn))/60/60/24/1000);
   this.completeStatus = this.completedOn ? `completed ${this.daysAgo} days ago` : '(draft)';
   return templateRender(this);
-
 };
 
 projectData.sort(function(a,b) {
@@ -25,9 +24,9 @@ projectData.sort(function(a,b) {
 });
 
 projectData.forEach(function(projectObject){
-  projects.push(new Project(projectObject));
+  projects.push(new Projects(projectObject));
 });
 
 projects.forEach(function(a){
-  $('projects').append(a.toHtml());
+  $('#projects').append(a.toHtml());
 });

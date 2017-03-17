@@ -13,7 +13,7 @@
   margin: .2em 5%;
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 640px) and (max-width: 960px) {
   .heading-group-h1 {
     padding: .1em .1em .1em .2em;
     float: none;

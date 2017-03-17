@@ -1,9 +1,12 @@
+html{
+  background: url('../imgs/moss-background.jpg');
+}
+
 img{
   max-width: 100%;
 }
 
 body{
-  background-image: url('imgs/moss-background');
   line-height: 1.5;
   font-size: 100%;
   color: #96e8bc;

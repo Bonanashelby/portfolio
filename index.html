@@ -5,7 +5,7 @@
     <title>Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale= 1">
     <link rel="stylesheet" href="vendors/styles/normalize.css">
-    <link rel="stylesheet" href="vendors/styles/normalize.css">
+    <link rel="stylesheet" href="vendors/icons.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
@@ -38,13 +38,16 @@
         <div class="icon-menu"></div>
         <ul>
           <li class="tab" data-content="home"><a href="#" class="icon-home">Home</a></li>
-          <li class="tab" data-content="about"><a href="#" class="icon-address-book">About</a></li>
+          <li class="tab" data-content="about"><a href="#" class="icon-star-full">About</a></li>
           <li><a href="http://github.com/bonanashelby" target="_blank" class="icon-github" >Projects</a></li>
-          <li class="tab" data-content="skills"><a href="#" class="icon-github">Skills</a></li>
+          <li class="tab" data-content="skills"><a href="#" class="icon-pencil">Skills</a></li>
         </ul>
       </nav>
     </header>
     <main>
+      <section id="projects" class="tab-content">
+
+      </section>
       <section id="about" class="tab-content">
         <header>
           <h1>Welcome to my online portfolio<h1>
@@ -65,25 +68,14 @@
           </ul>
         </section>
       </section>
-        <section id="projects" class="tab-content">
-          <article class="template" data-category="cat">
-            <header>
-              <h1>Title</h1>
-              <div class="tagline">
-                in <address><a href="">Code Language</a></address>
-                Completed <time pubdate datetime="2000-01-01">Completed Time</time>
-              </div>
-            </header>
-        <section class="project-description"></section>
-      </section>
     </main>
     <footer>
       &copy; 2017 Anna Shelby | Portfolio | Code Fellows 301
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
-  <script type="text/javascript" src="projectInfo.js"></script>
-  <script type="text/javascript" src="app.js">
+  <script type="text/javascript" src="scripts/projectInfo.js"></script>
+  <script type="text/javascript" src="scripts/app.js">
   <script type="text/javascript" src="scripts/projectView.js"></script>
   </body>
 </html>
