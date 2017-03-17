@@ -2,15 +2,15 @@
   background: #4b7f52;
 }
 
-.main-header-group {
+.heading-group-h1 {
   float: left;
   padding: 0 0 .1em .1em;
 }
 
-i {
+.icon-menu {
+  font-size: 3em;
   float: right;
-  padding-left: 300px;
-  color: red;
+  color: purple;
 }
 
 .main-nav {
@@ -35,8 +35,17 @@ i {
   border-bottom: 1.5px solid #4b7f52;
 }
 
+#filters {
+  padding: 0;
+  list-style: none;
+}
+
 .template {
   display: none;
+}
+
+.tagline {
+  color: black;
 }
 
 .tagline a {
@@ -46,9 +55,9 @@ i {
 
 /*MOBILE FIRST @MEDIA============*/
 
-@media only screen and (max-width: 960px) {
-  i {
-  display:none;
+@media only screen and (min-width: 640px) and (max-width: 960px){
+  .icon-menu {
+    display: none;
   }
 
   .main-nav {
