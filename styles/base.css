@@ -1,6 +1,17 @@
+img{
+  max-width: 100%;
+}
+
 body{
+  background-image: url('imgs/moss-background');
+  line-height: 1.5;
   font-size: 100%;
   color: #96e8bc;
+}
+
+hr{
+  margin: 1em;
+  width: 70%;
 }
 
 /*TEXT STYLES======================================*/

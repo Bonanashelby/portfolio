@@ -1,5 +1,5 @@
 'use strict';
-// going to add github links and real info later - just to get something in there for me to see right now
+
 var projectData = [
   {
     title: 'Project 1',
