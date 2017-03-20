@@ -38,7 +38,7 @@ projectView.handleTitleFilter = function() {
 
 projectView.handleLanguageFilter = function () {
   $('#language-filter').on('change', function () {
-    if ($(this).val() {
+    if ($(this).val()) {
       $('project').hide();
       $(`project[data-language="${$(this).val()}"]`).fadeIn();
     } else {
@@ -53,9 +53,13 @@ projectView.handleMainNav = function() {
   $('.main-nav').on('click', '.tab', function() {
     $('.tab-content').hide();
     $('#' + $(this).attr('data-content')).fadeIn();
-  });
+    let test = $(this).attr('data-content');
+    console.log(test, 'what is here?');
 
-  $('.main-nav .tab:first').click();
+    if(test === 'home'){
+      $('.tab-content').show();
+    }
+  });
 };
 
 projectView.setDescriptionTeasers = function() {
