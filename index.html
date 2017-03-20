@@ -5,24 +5,19 @@
     <title>Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale= 1">
     <link rel="stylesheet" href="vendors/styles/normalize.css">
-    <link rel="stylesheet" href="vendors/icons.css">
     <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="vendors/icons.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
-
+    <!-- <link rel="icon" href="image/x-icon" href="vendors/styles/"> -->
     <script id="project-template" type="text/x-handlebars-template">
-      <project data-language="{{language}}" data-title="{{title}}">
-        <header>
-          <h1>{{title}}</h1>
-            <div class="tagline">
-              Title <address><a href="{{projectUrl}}">{{title}}</a></address>
-              Completed <time pubdate datetime="{{completedOn}}">{{daysAgo}} days ago</time>
-            </div>
-        </header>
-          <section class="project-description">{{{description}}}</section>
-          <a href="#" class="read-on">Read on &rarr;</a>
-          <hr>
-        </article>
+    <project data-language="{{language}}" data-title="{{title}}">
+      <h1>{{title}}</h1>
+      <a class="project-url" href="{{projectUrl}}"><h3>{{language}}</h3></a>
+      Completed <time pubdate datetime="{{completedOn}}">{{daysAgo}} days ago</time>
+      <p>{{{description}}}</p>
+      <a href="#" class="read-on">Read on &rarr;</a>
+      <hr>
     </script>
   </head>
 
@@ -86,9 +81,9 @@
       &copy; 2017 Anna Shelby | Portfolio | Code Fellows 301
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
-  <script type="text/javascript" src="scripts/projectInfo.js"></script>
-  <script type="text/javascript" src="scripts/app.js"></script>
-  <script type="text/javascript" src="scripts/projectView.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script type="text/javascript" src="scripts/projectInfo.js"></script>
+    <script type="text/javascript" src="scripts/app.js"></script>
+    <script type="text/javascript" src="scripts/projectView.js"></script>
   </body>
 </html>
