@@ -17,6 +17,10 @@ hr{
   width: 70%;
 }
 
+a{
+  text-decoration: underline wavy red;
+  /*list-style-type: none;*/
+}
 /*TEXT STYLES======================================*/
 p{
   font-size: 1em;
@@ -27,11 +31,11 @@ address{
 }
 
 /*LINK STYLES=====================================*/
-/*a, a:link a:active {
+a, a:link a:active {
   text-decoration: none;
-  color: #4b7f52;
+  /*color: #4b7f52;*/
 }
 
 a:hover a:focus{
   color: #7dd181;
-}*/
+}

@@ -32,7 +32,6 @@
   margin-right: 2em;
   font-size: 1em;
   padding: .5em .2em;
-  border-bottom: 1.5px solid #4b7f52;
 }
 
 #filters {
@@ -44,12 +43,7 @@
   display: none;
 }
 
-.tagline {
-  color: black;
-}
-
-.tagline a {
-  font-weight: bold;
+.main-nav li a{
   text-decoration: none;
 }
 
@@ -73,7 +67,7 @@
     border-bottom: none;
   }
 
-  /*.main-nav ul li:hover a {
+  .main-nav ul li:hover a {
     color: #7dd181;
-  }*/
+  }
 }
