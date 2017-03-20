@@ -6,18 +6,17 @@ projectView.populateFilters = function() {
   $('project').each(function (){
     if(!$(this).hasClass('template'))
     {
-      var val = $(this).find('address a').text();
+      var val = $(this).attr('data-title');
       var optionTag = `<option value="${val}">${val}</option>`;
-
-      if ($(`#project-filter option[value="${val}"]`).length === 0){
-        $('#project-filter').append(optionTag);
+      if ($(`#title-filter option[value="${val}"]`).length === 0){
+        $('#title-filter').append(optionTag);
       }
 
       val =
-      $(this).attr('data-category');
+      $(this).attr('data-language');
       optionTag = `<option value="${val}">${val}</option>`;
-      if ($(`#category-filter option[value="${val}"]`).length === 0) {
-        $('#category-filter').append(optionTag);
+      if ($(`#language-filter option[value="${val}"]`).length === 0) {
+        $('#language-filter').append(optionTag);
       }
     }
   });
