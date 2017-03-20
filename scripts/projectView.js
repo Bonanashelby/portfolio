@@ -50,12 +50,12 @@ projectView.handleLanguageFilter = function () {
 }
 
 projectView.handleMainNav = function() {
-  $('.main-nav').on('click', '.tab', function(event) {
+  $('.main-nav').on('click', '.tab', function() {
     $('.tab-content').hide();
-    $('#' + $(this).data('content')).fadeIn();
+    $('#' + $(this).attr('data-content')).fadeIn();
   });
 
-  $('main-nav .tab:first').click();
+  $('.main-nav .tab:first').click();
 };
 
 projectView.setDescriptionTeasers = function() {
@@ -68,10 +68,8 @@ projectView.setDescriptionTeasers = function() {
   });
 };
 
-$(document).ready(function(){
-  projectView.populateFilters();
-  projectView.handleLanguageFilter();
-  projectView.handleTitleFilter();
-  projectView.handleMainNav();
-  projectView.setDescriptionTeasers();
-})
+projectView.populateFilters();
+projectView.handleLanguageFilter();
+projectView.handleTitleFilter();
+projectView.handleMainNav();
+projectView.setDescriptionTeasers();
