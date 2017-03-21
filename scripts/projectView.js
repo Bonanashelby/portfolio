@@ -44,7 +44,7 @@ projectView.handleLanguageFilter = function () {
       $('project').fadeIn();
       $('project.template').hide();
     }
-    $('project-filter').val('');
+    $('title-filter').val('');
   })
 }
 
@@ -52,8 +52,7 @@ projectView.handleMainNav = function() {
   $('.main-nav').on('click', '.tab', function() {
     $('.tab-content').hide();
     $('#' + $(this).attr('data-content')).fadeIn();
-    let test = $(this).attr('data-content');
-    console.log(test, 'what is here?');
+    var test = $(this).attr('data-content');
 
     if(test === 'home'){
       $('.tab-content').show();
