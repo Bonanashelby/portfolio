@@ -1,5 +1,7 @@
 html{
-  background: url('../imgs/moss-background.jpg');
+  /*colbalt blue*/
+  background-color: #556499;
+  /*background: url('../imgs/moss-background.jpg');*/
 }
 
 img{
@@ -9,17 +11,19 @@ img{
 body{
   line-height: 1.5;
   font-size: 100%;
-  color: #96e8bc;
+  /*robins egg blue*/
+  color: #9bc1cc;
 }
 
 hr{
   margin: 1em;
   width: 70%;
+  /*off white*/
+  color: #dae1da;
 }
 
 a{
-  text-decoration: underline wavy red;
-  /*list-style-type: none;*/
+  list-style-type: none;
 }
 /*TEXT STYLES======================================*/
 p{
@@ -31,11 +35,11 @@ address{
 }
 
 /*LINK STYLES=====================================*/
-a, a:link a:active {
+/*a, a:link a:active {
   text-decoration: none;
-  /*color: #4b7f52;*/
+  color: #4b7f52;
 }
 
 a:hover a:focus{
-  color: #7dd181;
-}
+  color: #9bc1cc;
+}*/

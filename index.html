@@ -10,12 +10,13 @@
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
     <!-- <link rel="icon" href="image/x-icon" href="vendors/styles/"> -->
+    <link href="https://fonts.googleapis.com/css?family=Crete+Round|Francois+One|Lobster|Oswald|Pacifico" rel="stylesheet">
     <script id="project-template" type="text/x-handlebars-template">
     <project data-language="{{language}}" data-title="{{title}}">
       <h1>{{title}}</h1>
       <a class="project-url" href="{{projectUrl}}"><h3>{{language}}</h3></a>
       Completed <time pubdate datetime="{{completedOn}}">{{daysAgo}} days ago</time>
-      <p>{{{description}}}</p>
+      <p class="project-description">{{{description}}}</p>
       <a href="#" class="read-on">Read on &rarr;</a>
       <hr>
     </script>
@@ -27,7 +28,7 @@
         <h1>
           Anna Shelby
         </h1>
-        <h2>Online Portfolio</h2>
+        <h2>Portfolio</h2>
       </section>
       <nav class="main-nav">
         <div class="icon-menu"></div>
