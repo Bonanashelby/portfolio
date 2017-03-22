@@ -59,12 +59,11 @@ projectView.handleMainNav = function() {
     }
   });
 };
-// work on fixing set description teasers 
 projectView.setDescriptionTeasers = function() {
-  $('p.project-description *:nth-of-type(n+2)').hide();
+  $('.project-description *:nth-of-type(n+2)').hide();
 
-  $('#project-template').on('click', 'a.read-on', function(event) {
-    event.preventDefault();
+  $('#projects').on('click', 'a.read-on', function(e) {
+    e.preventDefault();
     $(this).parent().find('*').fadeIn();
     $(this).hide();
   });
