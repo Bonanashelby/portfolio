@@ -6,8 +6,10 @@ projectView.populateFilters = function() {
   $('project').each(function (){
     if(!$(this).hasClass('template'))
     {
-      var val = $(this).attr('data-title');
-      var optionTag = `<option value="${val}">${val}</option>`;
+      let val = $(this).attr('data-title');
+      // line 11 is es6 not jquery
+      let optionTag = `<option value="${val}">${val}</option>`;
+      // checking a property in line 12 not running a function
       if ($(`#title-filter option[value="${val}"]`).length === 0){
         $('#title-filter').append(optionTag);
       }
@@ -101,7 +103,7 @@ projectView.create = function() {
 };
 //  initializing prjoect index page here
 projectView.initIndexPage = function() {
-  Project.all.forEach(function(a) {
+  Projects.all.forEach(function(a) {
     $('#projects').append(a.toHtml())
   });
 
