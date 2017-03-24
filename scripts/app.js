@@ -1,7 +1,5 @@
 'use strict';
 
-var projects = [];
-
 function Projects (projs) {
   this.title = projs.title;
   this.language = projs.language;
@@ -9,24 +7,40 @@ function Projects (projs) {
   this.completedOn = projs.completedOn;
   this.description = projs.description;
 }
+Projects.all = [];
 
-Projects.prototype.toHtml = function(){
-  var source = $('#project-template').html();
-  var templateRender = Handlebars.compile(source);
+Projects.prototype.toHtml = function (){
+  let template = Handlebars.compile($('#project-template').text());
 
   this.daysAgo = parseInt((new Date () - new Date(this.completedOn))/60/60/24/1000);
   this.completeStatus = this.completedOn ? `completed ${this.daysAgo} days ago` : '(draft)';
-  return templateRender(this);
+
+  return template(this);
 };
 
-projectData.sort(function(a,b) {
-  return (new Date(b.completedOn)) - (new Date(a.completedOn));
-});
+Projects.loadAll = function(projectData) {
+  projectData.sort(function(a,b) {
+    return (new Date(b.completedOn) - new Date(a.completedOn));
+  });
 
-projectData.forEach(function(projectObject){
-  projects.push(new Projects(projectObject));
-});
+  projectData.forEach(function(ele){
+    Projects.all.push(new Projects(ele));
+  })
+}
 
-projects.forEach(function(a){
-  $('#projects').append(a.toHtml());
-});
+Projects.fetchAll = function() {
+  if (localStorage.projectData) {
+    Projects.loadAll(JSON.parse(localStorage.projectData));
+    projectView.initIndexPage();
+  } else {
+    $.getJSON('data/projectInfo.json')
+    .then(function(data){
+      localStorage.projectData = JSON.stringify(data);
+      Projects.loadAll(data);
+      console.log(Projects.all);
+      projectView.initIndexPage();
+    }, function(err) {
+        console.error(err);
+    })
+  }
+}

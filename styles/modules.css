@@ -1,5 +1,8 @@
 .portfolio-header {
-  background: #4b7f52;
+  /*dark gray*/
+  /*background: #514f58;*/
+  background: #e68888;
+
 }
 
 .heading-group-h1 {
@@ -10,7 +13,13 @@
 .icon-menu {
   font-size: 3em;
   float: right;
-  color: purple;
+  /*off white*/
+  color: #dae1da;
+}
+
+.icon-home, .icon-star-full, .icon-github, .icon-pencil{
+  /*off white*/
+  color: #dae1da;
 }
 
 .main-nav {
@@ -68,6 +77,7 @@
   }
 
   .main-nav ul li:hover a {
-    color: #7dd181;
+    /*salmon*/
+    color: #e68888;
   }
 }

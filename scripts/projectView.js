@@ -6,18 +6,19 @@ projectView.populateFilters = function() {
   $('project').each(function (){
     if(!$(this).hasClass('template'))
     {
-      var val = $(this).find('address a').text();
-      var optionTag = `<option value="${val}">${val}</option>`;
-
-      if ($(`#project-filter option[value="${val}"]`).length === 0){
-        $('#project-filter').append(optionTag);
+      let val = $(this).attr('data-title');
+      // line 11 is es6 not jquery
+      let optionTag = `<option value="${val}">${val}</option>`;
+      // checking a property in line 12 not running a function
+      if ($(`#title-filter option[value="${val}"]`).length === 0){
+        $('#title-filter').append(optionTag);
       }
 
       val =
-      $(this).attr('data-category');
+      $(this).attr('data-language');
       optionTag = `<option value="${val}">${val}</option>`;
-      if ($(`#category-filter option[value="${val}"]`).length === 0) {
-        $('#category-filter').append(optionTag);
+      if ($(`#language-filter option[value="${val}"]`).length === 0) {
+        $('#language-filter').append(optionTag);
       }
     }
   });
@@ -45,7 +46,7 @@ projectView.handleLanguageFilter = function () {
       $('project').fadeIn();
       $('project.template').hide();
     }
-    $('project-filter').val('');
+    $('title-filter').val('');
   })
 }
 
@@ -53,27 +54,31 @@ projectView.handleMainNav = function() {
   $('.main-nav').on('click', '.tab', function() {
     $('.tab-content').hide();
     $('#' + $(this).attr('data-content')).fadeIn();
-    let test = $(this).attr('data-content');
-    console.log(test, 'what is here?');
+    var test = $(this).attr('data-content');
 
     if(test === 'home'){
       $('.tab-content').show();
     }
   });
 };
-
 projectView.setDescriptionTeasers = function() {
   $('.project-description *:nth-of-type(n+2)').hide();
 
-  $('#projects').on('click', 'a.read-on', function(event) {
-    event.preventDefault();
+  $('#projects').on('click', 'a.read-on', function(e) {
+    e.preventDefault();
     $(this).parent().find('*').fadeIn();
     $(this).hide();
   });
 };
 
-projectView.populateFilters();
-projectView.handleLanguageFilter();
-projectView.handleTitleFilter();
-projectView.handleMainNav();
-projectView.setDescriptionTeasers();
+projectView.initIndexPage = function() {
+  Projects.all.forEach(function(a) {
+    $('#projects').append(a.toHtml())
+  });
+
+  projectView.populateFilters();
+  projectView.handleLanguageFilter();
+  projectView.handleTitleFilter();
+  projectView.handleMainNav();
+  projectView.setDescriptionTeasers();
+};
