@@ -70,38 +70,7 @@ projectView.setDescriptionTeasers = function() {
     $(this).hide();
   });
 };
-// initializing new project page here
-projectView.initNewProjectPage = function() {
-  $('.tab-content').show();
-  $('#export-field').hide();
-  $('#project-json').on('focus', function(){
-    this.select();
-  });
 
-  $('#new-project').on('change', 'input, textarea', projectView.create);
-};
-// this is where we create the new project
-projectView.create = function() {
-  let project;
-  $('#projects').empty();
-
-  project = new Project({
-    title: $('#project-title').val(),
-    language: $('#project-language').val(),
-    projectUrl: $('#project-url').val(),
-    description: $('#project-description').val(),
-    completedOn: $('#project-completed:checked').length ? new Date() : null
-  });
-
-  $('projects').append(project.toHtml());
-  $('pre-code').each(function(i, block){
-    hljs.highlightBlock(block);
-  });
-
-  $('#export-field').show();
-  $('#project-json').val(`${JSON.stringify(project)},`);
-};
-//  initializing prjoect index page here
 projectView.initIndexPage = function() {
   Projects.all.forEach(function(a) {
     $('#projects').append(a.toHtml())
