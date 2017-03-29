@@ -1,11 +1,9 @@
 'use strict'
-
 var projectView = {};
 
 projectView.populateFilters = function() {
   $('project').each(function (){
-    if(!$(this).hasClass('template'))
-    {
+    if(!$(this).hasClass('template')) {
       let val = $(this).attr('data-title');
       // line 11 is es6 not jquery
       let optionTag = `<option value="${val}">${val}</option>`;
@@ -46,7 +44,7 @@ projectView.handleLanguageFilter = function () {
       $('project').fadeIn();
       $('project.template').hide();
     }
-    $('title-filter').val('');
+    $('#title-filter').val('');
   })
 }
 
@@ -70,12 +68,13 @@ projectView.setDescriptionTeasers = function() {
     $(this).hide();
   });
 };
-
+//turned a forEach into a map function.
 projectView.initIndexPage = function() {
-  Projects.all.forEach(function(a) {
+  Projects.all.map((a) => {
     $('#projects').append(a.toHtml())
   });
-
+  $('#timeTaken').append(Projects.all.map((a) => parseInt(a.timeSpent)).reduce((b, c) => b + c));
+  //$('#timeTaken').append(Projects.all.timeSpent.reduce((a, b) = a + b);
   projectView.populateFilters();
   projectView.handleLanguageFilter();
   projectView.handleTitleFilter();
