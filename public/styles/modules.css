@@ -1,11 +1,15 @@
 .portfolio-header {
-  /*dark gray*/
-  /*background: #514f58;*/
-  background: #e68888;
-
+  background-image: url("./imgs/homepagecropped.png");
+  /*salmon*/
+  /*background: #e68888;*/
 }
 
-.heading-group-h1 {
+.logo{
+  width: 25%;
+  height: 25%;
+}
+
+.heading-image {
   float: left;
   padding: 0 0 .1em .1em;
 }
