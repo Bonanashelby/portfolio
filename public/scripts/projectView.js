@@ -74,7 +74,6 @@ projectView.initIndexPage = function() {
     $('#projects').append(a.toHtml())
   });
   $('#timeTaken').append(Projects.all.map((a) => parseInt(a.timeSpent)).reduce((b, c) => b + c));
-  //$('#timeTaken').append(Projects.all.timeSpent.reduce((a, b) = a + b);
   projectView.populateFilters();
   projectView.handleLanguageFilter();
   projectView.handleTitleFilter();
