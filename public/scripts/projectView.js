@@ -71,7 +71,7 @@ projectView.setDescriptionTeasers = function() {
 //turned a forEach into a map function.
 projectView.initIndexPage = function() {
   Projects.all.map((a) => {
-    $('#projects').append(a.toHtml())
+  $('#projects').append(a.toHtml())
   });
   $('#timeTaken').append(Projects.all.map((a) => parseInt(a.timeSpent)).reduce((b, c) => b + c));
   projectView.populateFilters();
