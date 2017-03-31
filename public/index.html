@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="./styles/modules.css">
     <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
     <link href="https://fonts.googleapis.com/css?family=Crete+Round|Francois+One|Lobster|Oswald|Pacifico" rel="stylesheet">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+<!--Handlebars template here  -->
     <script id="project-template" type="text/x-handlebars-template">
     <project data-language="{{language}}" data-title="{{title}}">
       <header>
@@ -43,10 +44,10 @@
           <li class="tab" data-content="home"><a href="/" class="icon-home">Home</a></li>
           <li class="tab" data-content="about"><a href="/about" class="icon-star-full">About</a></li>
           <li><a href="http://github.com/bonanashelby" target="_blank" class="icon-github" >Projects</a></li>
-          <li class="tab" data-content="skills"><a href="/skills" class="icon-pencil">Skills</a></li>
         </ul>
       </div>
     </header>
+    <!-- MAIN CONTENT STARTS HERE -->
     <div class="main">
       <section id="projects" class="tab-content">
         <div>
@@ -79,19 +80,8 @@
               <li>down here in a list</li>
             </ul>
         </section>
-      </section>
-      <section id="skills" class="tab-content">
-        <section>
-          <h1>Some of my Skills:</h1>
-          <ul>
-            <li>JavaScript</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>jQuery</li>
-          </ul>
+          <div id="time-taken">Time taken total for Project:</div>
         </section>
-            <div id="time-taken">Time taken total for Project:</div>
-      </section>
     </div>
     <footer>
       &copy; 2017 Anna Shelby | Portfolio | Code Fellows 301 Portfolio
@@ -99,10 +89,13 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
-    <!-- <script type="text/javascript" src="scripts/projectInfo.js"></script> -->
-    <script type="text/javascript" src="./scripts/app.js"></script>
-    <script type="text/javascript" src="./scripts/projectView.js"></script>
+
+    <script  src="./scripts/models/project.js"></script>
+    <script src="./scripts/views/projectView.js"></script>
+    <script src="./scripts/controllers/projectController.js"></script>
+
+    <script src="./scripts/controllers/aboutController.js"></script>
+    <script src="./scripts/controllers/routes.js"></script>
     <script>
       Projects.fetchAll();
     </script>
