@@ -1,11 +1,19 @@
 'use strict';
 
 (function(module) {
+  // const projectController = {};
+  // projectController.init = (function() {
+  //   $('#about').hide();
+  //   $('#projects').show();
+  // })
+
   const projectController = {};
-  projectController.init = (function() {
-    $('#about').hide();
-    $('#projects').show();
-  })
+  projectController.index = () => {
+  Project.fetchAll(projectView.initIndexPage);
+
+  $('main > section').hide();
+  $('#projects').show();
+  };
 
   module.projectController = projectController;
 })(window);

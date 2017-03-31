@@ -23,8 +23,8 @@ app.get('*', function(request, response) {
   response.sendFile('public/index.html', {root: '.'});
 });
 
-// app.get('/', (request, response) =>
-// response.sendFile('index.html', {root: '.'}));
+app.get('/', (request, response) =>
+response.sendFile('index.html', {root: '.'}));
 
 
 app.listen(PORT, function() {

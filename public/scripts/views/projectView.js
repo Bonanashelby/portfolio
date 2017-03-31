@@ -5,9 +5,7 @@ projectView.populateFilters = function() {
   $('project').each(function (){
     if(!$(this).hasClass('template')) {
       let val = $(this).attr('data-title');
-      // line 11 is es6 not jquery
       let optionTag = `<option value="${val}">${val}</option>`;
-      // checking a property in line 12 not running a function
       if ($(`#title-filter option[value="${val}"]`).length === 0){
         $('#title-filter').append(optionTag);
       }
@@ -48,17 +46,17 @@ projectView.handleLanguageFilter = function () {
   })
 }
 
-projectView.handleMainNav = function() {
-  $('.main-nav').on('click', '.tab', function() {
-    $('.tab-content').hide();
-    $('#' + $(this).attr('data-content')).fadeIn();
-    var test = $(this).attr('data-content');
-
-    if(test === 'home'){
-      $('.tab-content').show();
-    }
-  });
-};
+// projectView.handleMainNav = function() {
+//   $('.main-nav').on('click', '.tab', function() {
+//     $('.tab-content').hide();
+//     $('#' + $(this).attr('data-content')).fadeIn();
+//     var test = $(this).attr('data-content');
+//
+//     if(test === 'home'){
+//       $('.tab-content').show();
+//     }
+//   });
+// };
 projectView.setDescriptionTeasers = function() {
   $('.project-description *:nth-of-type(n+2)').hide();
 
@@ -77,6 +75,6 @@ projectView.initIndexPage = function() {
   projectView.populateFilters();
   projectView.handleLanguageFilter();
   projectView.handleTitleFilter();
-  projectView.handleMainNav();
+  // projectView.handleMainNav();
   projectView.setDescriptionTeasers();
 };
