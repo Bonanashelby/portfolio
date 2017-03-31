@@ -6,7 +6,7 @@
   repos.all = [];
 
   repos.requestRepos = function(callback) {
-    $ajax({
+    $.ajax({
       url: 'https://api.github.com/user/repos?type=owner',
       method: 'GET',
       headers: {
