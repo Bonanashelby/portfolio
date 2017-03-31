@@ -1,4 +1,5 @@
 'use strict';
+
 (function(module) {
   function Projects (projs) {
     this.title = projs.title;
@@ -8,6 +9,7 @@
     this.description = projs.description;
     this.timeSpent = projs.timeSpent;
   }
+
   Projects.all = [];
 
   Projects.prototype.toHtml = function (){
