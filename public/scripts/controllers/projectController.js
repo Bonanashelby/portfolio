@@ -9,7 +9,7 @@
 
   const projectController = {};
   projectController.index = () => {
-  Project.fetchAll(projectView.initIndexPage);
+  Projects.fetchAll(projectView.initIndexPage);
 
   $('main > section').hide();
   $('#projects').show();
